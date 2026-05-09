@@ -48,7 +48,7 @@ export function Nabvar() {
                         <div>
                             <ul className="hidden md:flex gap-3 items-center">
                                 <li><Link className={pathname==='/'?'underline text-cyan-500 font-bold':'no-underline'} href="/">Home</Link></li>
-                                <li><Link className={pathname==='/destinations'?'underline text-cyan-500 font-bold':'no-underline'} href="/destinations">Destinations</Link></li>
+                                <li><Link className={pathname==='/destination'?'underline text-cyan-500 font-bold':'no-underline'} href="/destination">Destinations</Link></li>
                                 <li><Link className={pathname==='/mybookings'?'underline text-cyan-500 font-bold':'no-underline'} href="/mybookings">My Bookings</Link></li>
                                 <li><Link className={pathname==='/add-destination'?'underline text-cyan-500 font-bold':'no-underline'} href="/add-destination">Add Destinations</Link></li>
                             </ul>
@@ -76,7 +76,7 @@ export function Nabvar() {
                     <div className="border-t border-separator md:hidden">
                         <ul className="flex flex-col gap-2 p-4">
                             <li><Link href="/">Home</Link></li>
-                            <li><Link href="/destinations">Destinations</Link></li>
+                            <li><Link href="/destination">Destinations</Link></li>
                             <li><Link href="/mybookings">My Bookings</Link></li>
                             <li><Link className={'no-underline'} href="/add-destination">Add Destinations</Link></li>
                         </ul>

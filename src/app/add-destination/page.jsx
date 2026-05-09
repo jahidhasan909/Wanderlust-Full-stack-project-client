@@ -1,10 +1,13 @@
 'use client'
-import { FieldError, Input, Label, TextField, Select, ListBox, TextArea, Button, Card, toast } from '@heroui/react';
-import React from 'react';
+import { FieldError, Input, Label, TextField, Select, ListBox, TextArea, Button, Card } from '@heroui/react';
+import React, { useRef } from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaWpforms } from "react-icons/fa6";
+import { toast } from 'react-toastify';
 
 const AddDestination = () => {
+
+    const formRef = useRef(null)
 
 
     const onSubmit = async (e) => {
@@ -20,7 +23,7 @@ const AddDestination = () => {
             body: JSON.stringify(newDestination)
         })
 
-        const data =await res.json()
+        const data = await res.json()
 
         if (data) {
             toast.success('Add Destination successfully !')
@@ -35,6 +38,7 @@ const AddDestination = () => {
             <h1 className='font-bold text-3xl mb-5 mt-2 pl-20'>Add New Travel Package</h1>
             <Card className=' rounded-md shadow-md border border-white/20 max-w-7xl mx-auto'>
                 <form
+                    ref={formRef}
                     onSubmit={onSubmit}
                     className="p-10 space-y-8 "
                 >
@@ -158,7 +162,9 @@ const AddDestination = () => {
                     {/* Buttons */}
 
                     <div className='flex items-center gap-2'>
-                        <Button variant='outline' className={'text-red-400 rounded-md border-red-400'}>
+                        <Button onClick={
+                            () => formRef.current.reset()
+                        } variant='outline' className={'text-red-400 rounded-md border-red-400'}>
                             <RiDeleteBin6Line />
                             Cancel
                         </Button>
