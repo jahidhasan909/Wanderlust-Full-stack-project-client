@@ -1,3 +1,4 @@
+"use client"
 import { Button, Card } from '@heroui/react';
 import Image from 'next/image';
 import React from 'react';
@@ -6,6 +7,7 @@ import { SlLocationPin } from 'react-icons/sl';
 import { MdEditLocationAlt } from "react-icons/md";
 import Link from 'next/link';
 import { ArrowShapeTurnUpLeft, ArrowUpLeft, ArrowUpRightFromSquare } from '@gravity-ui/icons';
+import EditModal from '../EditModal/EditModal';
 
 const SingleDestinationCard = ({ data }) => {
     const { destinationName, country, price, duration, departureDate, imageUrl, description } = data
@@ -17,11 +19,11 @@ const SingleDestinationCard = ({ data }) => {
                     Back to Destinations
                 </Link>
                 <div>
-                    <Button className={'rounded-md border-gray-300'} variant='outline'><MdEditLocationAlt /> Edit</Button>
+                 <EditModal data={data}></EditModal>
                 </div>
             </div>
             <Card variant="" className={'rounded-md'}>
-                <Image src={imageUrl} className='w-full rounded-md h-[600px]' height={200} width={200} alt={destinationName}></Image>
+                <Image src={imageUrl} className='w-full rounded-md h-[500px] object-cover' height={200} width={200} alt={destinationName}></Image>
                 <span className='flex items-center gap-1 text-neutral-500 mt-3'><SlLocationPin /> {country}</span>
                 <Card.Header className='grid grid-cols-12 gap-4  justify-between'>
                     <div className=' space-y-2 col-span-10 mt-4'>
