@@ -8,6 +8,7 @@ import { MdEditLocationAlt } from "react-icons/md";
 import Link from 'next/link';
 import { ArrowShapeTurnUpLeft, ArrowUpLeft, ArrowUpRightFromSquare } from '@gravity-ui/icons';
 import EditModal from '../EditModal/EditModal';
+import { AlertDelete } from '../AlertDiloag/AlertDiloag';
 
 const SingleDestinationCard = ({ data }) => {
     const { destinationName, country, price, duration, departureDate, imageUrl, description } = data
@@ -18,8 +19,9 @@ const SingleDestinationCard = ({ data }) => {
                     <ArrowUpLeft></ArrowUpLeft>
                     Back to Destinations
                 </Link>
-                <div>
-                 <EditModal data={data}></EditModal>
+                <div className='flex items-center gap-2'>
+                    <AlertDelete data={data}></AlertDelete>
+                    <EditModal data={data}></EditModal>
                 </div>
             </div>
             <Card variant="" className={'rounded-md'}>
