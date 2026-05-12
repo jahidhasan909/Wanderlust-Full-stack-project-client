@@ -9,6 +9,7 @@ import Link from 'next/link';
 import { ArrowShapeTurnUpLeft, ArrowUpLeft, ArrowUpRightFromSquare } from '@gravity-ui/icons';
 import EditModal from '../EditModal/EditModal';
 import { AlertDelete } from '../AlertDiloag/AlertDiloag';
+import BookingCard from '../BookingCard/BookingCard';
 
 const SingleDestinationCard = ({ data }) => {
     const { destinationName, country, price, duration, departureDate, imageUrl, description } = data
@@ -35,20 +36,8 @@ const SingleDestinationCard = ({ data }) => {
                         <h2 className='text-2xl font-semibold'>Overview</h2>
                         <p className='text-neutral-500'>{description}</p>
                     </div>
-                    <Card className=' rounded-md  col-span-2'>
-                        <div>
-                            <p className='text-neutral-500'>Starting from</p>
-                            <h3 className='text-xl text-cyan-500'>${price}</h3>
-                            <p className='text-neutral-500'>per person</p>
-                        </div>
-                        <span className='border border-gray-300 text-center p-0.5 bg-gray-300 rounded-md mt-3'>{departureDate}</span>
-                        <Button className={' rounded-md bg-cyan-500 text-white w-full'} variant='outline'>Book Now <FaArrowRightLong /></Button>
-                        <ul className=' list-disc text-[13px] text-neutral-500'>
-                            <li>Free cancellation up to 7 days</li>
-                            <li>Travel insurance included</li>
-                            <li>24/7 customer support</li>
-                        </ul>
-                    </Card>
+                    
+                    <BookingCard className={''} destination={data}></BookingCard>
                 </Card.Header>
             </Card>
         </div>
