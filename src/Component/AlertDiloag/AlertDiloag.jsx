@@ -33,7 +33,7 @@ export function AlertDelete({data}) {
             <Button className={'rounded-md text-red-400 border-red-400'} variant="outline"><TrashBin></TrashBin> Delete</Button>
             <AlertDialog.Backdrop>
                 <AlertDialog.Container>
-                    <AlertDialog.Dialog className="sm:max-w-[400px]">
+                    <AlertDialog.Dialog className="sm:max-w-[400px] rounded-md">
                         <AlertDialog.CloseTrigger />
                         <AlertDialog.Header>
                             <AlertDialog.Icon status="danger" />

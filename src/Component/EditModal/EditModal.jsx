@@ -46,7 +46,7 @@ const EditModal = ({ data }) => {
                 <Button className={'rounded-md border-gray-300'} variant='outline'><MdEditLocationAlt /> Edit</Button>
                 <Modal.Backdrop>
                     <Modal.Container placement="auto">
-                        <Modal.Dialog className="sm:max-w-md md:max-w-3xl">
+                        <Modal.Dialog className="sm:max-w-md md:max-w-3xl rounded-md">
                             <Modal.CloseTrigger />
                             <Modal.Header>
 
@@ -171,7 +171,7 @@ const EditModal = ({ data }) => {
                                                     <Label>Description</Label>
                                                     <TextArea
                                                         placeholder="Describe the travel experience..."
-                                                        className="rounded-md"
+                                                        className="rounded-md h-[80px]"
                                                     />
                                                     <FieldError />
                                                 </TextField>
