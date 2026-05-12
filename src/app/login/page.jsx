@@ -15,7 +15,7 @@ const LogInPage = () => {
         const formData = new FormData(e.currentTarget);
         const user = Object.fromEntries(formData.entries())
 
-        const { data,error } = await authClient.signIn.email({
+        const { data, error } = await authClient.signIn.email({
 
             email: user.email,
             password: user.password,
@@ -31,6 +31,12 @@ const LogInPage = () => {
             toast.warning(error.message)
         }
 
+    }
+
+    const handleGoogleLogin = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+        });
     }
 
 
@@ -67,7 +73,7 @@ const LogInPage = () => {
                             if (value.length < 8) {
                                 return "Password must be at least 8 characters";
                             }
-                           
+
                             return null;
                         }}
                     >
@@ -84,13 +90,13 @@ const LogInPage = () => {
                 <div className="flex justify-center items-center gap-3 mx-2">
                     <Separator />
                     <div className=" whitespace-nowrap text-neutral-500">
-                       Or continue with
+                        Or continue with
                     </div>
                     <Separator />
                 </div>
-                <Button variant="outline" className={'w-full rounded-md'}>
+                <Button onClick={handleGoogleLogin} variant="outline" className={'w-full rounded-md'}>
                     <FcGoogle />
-                    Sign Up With Google
+                    Log In With Google
                 </Button>
 
                 <span className="text-center text-neutral-500">Don't have an account? <Link href={'/singup'}><span className="text-cyan-500 font-semibold">Sign Up</span></Link></span>

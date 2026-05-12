@@ -34,12 +34,13 @@ const SingupPage = () => {
             toast.warning(error.message)
         }
 
-      
-
-
-
     }
 
+   const handleGoogleSingup = async () => {
+        await authClient.signIn.social({
+            provider: "google",
+        });
+    }
 
 
 
@@ -116,7 +117,7 @@ const SingupPage = () => {
                     </div>
                     <Separator />
                 </div>
-                <Button variant="outline" className={'w-full rounded-md'}>
+                <Button onClick={handleGoogleSingup} variant="outline" className={'w-full rounded-md'}>
                     <FcGoogle />
                     Sign Up With Google
                 </Button>

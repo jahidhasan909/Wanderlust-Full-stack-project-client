@@ -19,7 +19,7 @@ const DestinationCard = ({ destination }) => {
     return (
         <div>
             <Card variant="" className={'rounded-md'}>
-                <Image src={imageUrl} className='w-full rounded-md h-[230px]' height={200} width={200} alt={destinationName}></Image>
+                <Image src={imageUrl} className='w-full object-cover rounded-md h-[230px]' height={230} width={250} alt={destinationName}></Image>
                 <span className='flex items-center gap-1 text-neutral-500'><SlLocationPin /> {country}</span>
                 <Card.Header className='flex flex-row items-center  justify-between'>
                     <div className=' space-y-2'>

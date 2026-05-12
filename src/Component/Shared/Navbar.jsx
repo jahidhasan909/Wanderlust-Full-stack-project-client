@@ -1,13 +1,24 @@
 "use client"
 import { useState } from "react";
-import { Link, Button } from "@heroui/react";
+import { Link, Button, Avatar } from "@heroui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { authClient } from "@/lib/auth-client";
 
 
 export function Nabvar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const pathname = usePathname()
+
+    const { data, isPending } = authClient.useSession()
+
+    const user = data?.user
+
+    if (isPending) {
+        return <div>Loading...</div>
+    }
+
+
 
     return (
         <div className="sticky top-0 z-40 w-full border-b border-separator bg-white/60 backdrop-blur-lg">
@@ -47,10 +58,10 @@ export function Nabvar() {
 
                         <div>
                             <ul className="hidden md:flex gap-3 items-center">
-                                <li><Link className={pathname==='/'?'underline text-cyan-500 font-bold':'no-underline'} href="/">Home</Link></li>
-                                <li><Link className={pathname==='/destination'?'underline text-cyan-500 font-bold':'no-underline'} href="/destination">Destinations</Link></li>
-                                <li><Link className={pathname==='/mybookings'?'underline text-cyan-500 font-bold':'no-underline'} href="/mybookings">My Bookings</Link></li>
-                                <li><Link className={pathname==='/add-destination'?'underline text-cyan-500 font-bold':'no-underline'} href="/add-destination">Add Destinations</Link></li>
+                                <li><Link className={pathname === '/' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/">Home</Link></li>
+                                <li><Link className={pathname === '/destination' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/destination">Destinations</Link></li>
+                                <li><Link className={pathname === '/mybookings' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/mybookings">My Bookings</Link></li>
+                                <li><Link className={pathname === '/add-destination' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/add-destination">Add Destinations</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -64,12 +75,26 @@ export function Nabvar() {
                         <li>
                             <Link className={'no-underline'} href="/profile">Profile</Link>
                         </li>
-                        <li>
-                            <Link className={'no-underline'} href="/login">Login</Link>
-                        </li>
-                        <li>
-                            <Link className={'no-underline'} href="/singup">Sing Up</Link>
-                        </li>
+
+                        {
+                            user ? <ul className="flex items-center gap-2">
+                               <Link href="/profile">
+                                <Avatar>
+                                    <Avatar.Image referrerPolicy="no-referrer" alt={user?.name} src={user?.image} />
+                                    <Avatar.Fallback>{user?.name.charAt(0, 2)}</Avatar.Fallback>
+                                </Avatar>
+                               </Link>
+                                <li><Button variant="outline" className={'rounded-md'} onClick={() => authClient.signOut()}>Sing Out</Button> </li>
+                            </ul> :
+                                <ul className="flex gap-2">
+                                    <li>
+                                        <Link className={'no-underline'} href="/login">Login</Link>
+                                    </li>
+                                    <li>
+                                        <Link className={'no-underline'} href="/singup">Sing Up</Link>
+                                    </li>
+                                </ul>
+                        }
                     </ul>
                 </header>
                 {isMenuOpen && (
