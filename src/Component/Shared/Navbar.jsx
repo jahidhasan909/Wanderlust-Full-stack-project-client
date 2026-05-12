@@ -60,7 +60,7 @@ export function Nabvar() {
                             <ul className="hidden md:flex gap-3 items-center">
                                 <li><Link className={pathname === '/' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/">Home</Link></li>
                                 <li><Link className={pathname === '/destination' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/destination">Destinations</Link></li>
-                                <li><Link className={pathname === '/mybookings' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/mybookings">My Bookings</Link></li>
+                                <li><Link className={pathname === '/mybooking' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/mybooking">My Bookings</Link></li>
                                 <li><Link className={pathname === '/add-destination' ? 'underline text-cyan-500 font-bold' : 'no-underline'} href="/add-destination">Add Destinations</Link></li>
                             </ul>
                         </div>

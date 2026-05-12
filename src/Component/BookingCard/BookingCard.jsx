@@ -26,6 +26,7 @@ const BookingCard = ({ destination }) => {
             destinationName,
             imageUrl,
             country,
+            price,
             departureDate: new Date(departureDate)
         }
 
