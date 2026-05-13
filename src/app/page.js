@@ -1,6 +1,7 @@
 import Banner from "@/Component/Banner/Banner";
 import AppendDots from "@/Component/FeaturedDestination/FeatureDestinationSilder";
 import FeaturedDestinationCardSilder from "@/Component/FeaturedDestination/FeatureDestinationSilder";
+import ReadyToTrip from "@/Component/ReadyToTrip/ReadyToTrip";
 import TravelarsSay from "@/Component/TravelarsSay/TravelarsSay";
 import WhyChoose from "@/Component/WhyChoose/WhyChoose";
 import Image from "next/image";
@@ -12,6 +13,7 @@ export default function Home() {
      <AppendDots></AppendDots>
      <WhyChoose></WhyChoose>
      <TravelarsSay></TravelarsSay>
+     <ReadyToTrip></ReadyToTrip>
     </div>
   );
 }
