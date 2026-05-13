@@ -7,7 +7,7 @@ import BookingAlertDelete from "../AlertDiloag/BookingAlertDelete";
 const UserBookingDataCard = ({ bookingData }) => {
     return (
         <div>
-            <Card className="w-full rounded-md items-stretch md:flex-row">
+            <Card className="w-full rounded-md items-stretch md:flex-row bg-white/20 border-white/80  border" >
                 <div className="relative h-[140px] w-full shrink-0 overflow-hidden  sm:h-[150px] sm:w-[300px]">
                     <Image
                         alt="booking img"

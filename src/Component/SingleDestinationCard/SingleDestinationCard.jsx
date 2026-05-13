@@ -25,7 +25,7 @@ const SingleDestinationCard = ({ data }) => {
                     <EditModal data={data}></EditModal>
                 </div>
             </div>
-            <Card variant="" className={'rounded-md'}>
+            <Card variant="" className={'rounded-md bg-white/50 border-white/70 border'}>
                 <Image src={imageUrl} className='w-full rounded-md h-[500px] object-cover' height={500} width={1000} alt={destinationName}></Image>
                 <span className='flex items-center gap-1 text-neutral-500 mt-3'><SlLocationPin /> {country}</span>
                 <Card.Header className='grid grid-cols-12 gap-4  justify-between'>

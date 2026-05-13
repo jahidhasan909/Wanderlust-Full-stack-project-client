@@ -51,7 +51,7 @@ const BookingCard = ({ destination }) => {
 
     return (
         <div className='col-span-2'>
-            <Card className=' rounded-md  '>
+            <Card className=' rounded-md  bg-white/40 border border-white/70'>
                 <div>
                     <p className='text-neutral-500'>Starting from</p>
                     <h3 className='text-xl text-cyan-500'>${price}</h3>
