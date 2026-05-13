@@ -78,13 +78,13 @@ export function Nabvar() {
 
                         {
                             user ? <ul className="flex items-center gap-2">
-                               <Link href="/profile">
-                                <Avatar>
-                                    <Avatar.Image referrerPolicy="no-referrer" alt={user?.name} src={user?.image} />
-                                    <Avatar.Fallback>{user?.name.charAt(0, 2)}</Avatar.Fallback>
-                                </Avatar>
-                               </Link>
-                                <li><Button variant="outline" className={'rounded-md'} onClick={() => authClient.signOut()}>Sing Out</Button> </li>
+                                <li onClick={() => authClient.signOut()}> SingOut </li>
+                                <Link href="/profile">
+                                    <Avatar>
+                                        <Avatar.Image referrerPolicy="no-referrer" alt={user?.name} src={user?.image} />
+                                        <Avatar.Fallback>{user?.name.charAt(0, 2)}</Avatar.Fallback>
+                                    </Avatar>
+                                </Link>
                             </ul> :
                                 <ul className="flex gap-2">
                                     <li>
