@@ -24,7 +24,7 @@ export function Nabvar() {
     return (
         <div className=" fixed absolute top-0 z-50 w-full py-5">
             <nav className=" container mx-auto ">
-                <header className="flex h-16 items-center justify-between px-6">
+                <header className="flex h-16 items-center justify-between ">
                     <div className="flex items-center gap-4">
                         <button
                             className="md:hidden"
@@ -107,14 +107,14 @@ export function Nabvar() {
                                         <Avatar.Fallback>{user?.name.charAt(0, 2)}</Avatar.Fallback>
                                     </Avatar>
                                 </Link>
-                                <li > <Button className={'rounded-md text-white'} variant="outline" onClick={() => authClient.signOut()}>SingOut</Button> </li>
+                                <li > <Button className={'rounded-md text-[#d09c22] border-[#d09c22]'} variant="outline" onClick={() => authClient.signOut()}>SingOut</Button> </li>
                             </ul> :
                                 <ul className="flex gap-2">
                                     <li>
-                                        <Link className={'no-underline'} href="/login"><Button className={'rounded-md text-white'} variant="outline">Login</Button></Link>
+                                        <Link className={'no-underline'} href="/login"><Button className={'rounded-md text-[#d09c22] border-[#d09c22]'} variant="outline">Login</Button></Link>
                                     </li>
                                     <li>
-                                        <Link className={'no-underline'} href="/singup"><Button className={'rounded-md text-white'} variant="outline">Sing Up</Button></Link>
+                                        <Link className={'no-underline'} href="/singup"><Button className={'rounded-md text-[#d09c22] border-[#d09c22]'} variant="outline">Sing Up</Button></Link>
                                     </li>
                                 </ul>
                         }

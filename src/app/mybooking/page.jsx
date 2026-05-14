@@ -18,10 +18,12 @@ const MyBookingPage = async () => {
 
 
     return (
-        <div className='container mx-auto my-10'>
-          <h1 className='font-bold text-3xl'>My Bookings</h1>
+        <div className='container mx-auto mt-35 mb-20 '>
+          <div className='px-3'>
+            <h1 className='font-bold text-3xl'>My Bookings</h1>
           <p className='text-neutral-500'>Manage and view your upcoming travel plans</p>
 
+          </div>
           <div className=' space-y-4 mt-8'>
             {
                 userBookingData.map(bookingData=><UserBookingDataCard key={bookingData._id} bookingData={bookingData}></UserBookingDataCard>)

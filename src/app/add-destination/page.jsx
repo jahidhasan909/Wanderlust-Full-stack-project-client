@@ -34,7 +34,7 @@ const AddDestination = () => {
 
 
     return (
-        <div className=' container mx-auto my-10'>
+        <div className=' container mx-auto mt-35 mb-20 '>
             <h1 className='font-bold text-3xl mb-5 mt-2 pl-20'>Add New Travel Package</h1>
             <Card className=' rounded-md shadow-md  bg-white/70 border border-white/70 max-w-7xl mx-auto'>
                 <form

@@ -30,7 +30,7 @@ const ProfilePage = () => {
 
 
     return (
-        <div className='container mx-auto my-10'>
+        <div className='container mx-auto mt-35 mb-20'>
             <h1 className='font-bold text-3xl text-center'>My Profile</h1>
             <p className='text-neutral-500 text-center'>Manage your account settings and travel preferences</p>
 

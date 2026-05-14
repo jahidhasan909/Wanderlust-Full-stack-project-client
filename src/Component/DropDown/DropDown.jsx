@@ -4,7 +4,7 @@ import { Button, Dropdown, Kbd, Label } from "@heroui/react";
 
 const DropDown = () => {
     return (
-        <div className="w-full grid grid-cols-3 my-8">
+        <div className="w-full grid grid-cols-3 my-8 px-3">
 
             <Dropdown className="">
                 <Button aria-label="Menu" variant="" className={'w-full border rounded-none flex justify-between py-5 uppercase text-neutral-500'}>
