@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
     >
       <body className="min-h-full flex flex-col">
         <Nabvar></Nabvar>
-        <main className="grow bg-[#eeffff3b] backdrop-blur-[400px]">
+        <main className="grow bg-[#0a0a0a] backdrop-blur-[400px]">
           {children}
         </main>
          <ToastContainer position="top-center" />

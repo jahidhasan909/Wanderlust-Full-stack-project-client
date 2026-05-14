@@ -105,7 +105,7 @@ const SingupPage = () => {
                         <FieldError />
                     </TextField>
 
-                    <Button type="submit" variant="outline" className={'bg-cyan-500 rounded-md w-full text-white'}>
+                    <Button type="submit" variant="outline" className={'bg-linear-to-r from-[#cfa36d] to-[#be8d1f] rounded-md w-full text-white'}>
                         Create Account
                     </Button>
 
@@ -122,7 +122,7 @@ const SingupPage = () => {
                     Sign Up With Google
                 </Button>
 
-                <span className="text-center text-neutral-500">Already have an account? <Link href={'/login'}><span className="text-cyan-500 font-semibold">Log In</span></Link></span>
+                <span className="text-center text-neutral-500">Already have an account? <Link href={'/login'}><span className="text-[#d09c22] font-semibold">Log In</span></Link></span>
             </Card>
         </div>
     );
