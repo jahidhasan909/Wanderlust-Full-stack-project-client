@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react";
-import { Link, Button, Avatar, Tabs } from "@heroui/react";
+import { Link, Button, Avatar } from "@heroui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
@@ -62,37 +62,36 @@ export function Nabvar() {
 
                     </div>
 
-                    <div className="w-full max-w-[730px] px-2">
+                    
 
-                        <Tabs 
-                        variant="secondary"
-                         selectedKey={pathname} className="">
-                            <Tabs.ListContainer>
-                                <Tabs.List aria-label="Tabs with disabled" className="bg-white/50 uppercase  rounded-full py-2 border border-white/80">
-                                    <Tabs.Tab id="/" className="">
-                                        <Link className={pathname==='/'?'py-2 no-underline text-[#ffb300] font-bold text-[12px]':'py-2 no-underline text-neutral-700 font-bold text-[12px]'}  href={'/'}>Home</Link>
-                                        <Tabs.Indicator className="bg-[#ffb300]"/>
-                                    </Tabs.Tab>
-                                    <Tabs.Tab id="/profile" className="px-0">
-                                        <Link className={pathname==='/profile'?'py-2 no-underline text-[#ffb300] font-bold text-[12px]':'py-2 no-underline text-neutral-700  font-bold text-[12px]'} href={'/profile'}>Profile</Link>
-                                         <Tabs.Indicator className="bg-[#ffb300]"/>
-                                    </Tabs.Tab>
-                                    <Tabs.Tab id="/destination" className="px-0">
-                                        <Link className={pathname==='/destination'?'py-2 no-underline text-[#ffb300] font-bold text-[12px]':'py-2 no-underline text-neutral-700 text-[12px] font-bold'} href={'/destination'}>Destinations</Link>
-                                         <Tabs.Indicator className="bg-[#ffb300]"/>
-                                    </Tabs.Tab>
-                                    <Tabs.Tab id="/mybooking" className="px-0">
-                                        <Link className={pathname==='/mybooking'?'py-2 no-underline text-[#ffb300] font-bold text-[12px]':'py-2 no-underline text-neutral-700 font-bold text-[12px]'} href={'/mybooking'}>My Bookings</Link>
-                                         <Tabs.Indicator className="bg-[#ffb300]"/>
-                                    </Tabs.Tab>
-                                    <Tabs.Tab id="/add-destination" className="px-0 pr-10">
-                                        <Link className={pathname==='/add-destination'?'py-2 text-[12px] no-underline text-[#ffb300] font-bold':'py-2 no-underline text-neutral-700 font-bold text-[12px]'} href={'/add-destination'}>Add Destinations</Link>
-                                         <Tabs.Indicator className="bg-[#ffb300]"/>
-                                    </Tabs.Tab>
-                                </Tabs.List>
-                            </Tabs.ListContainer>
-                        </Tabs>
-                    </div>
+                        
+                                <div  className="bg-white/50  gap-7 hidden md:flex px-17 uppercase rounded-full py-1 border border-white/80">
+
+
+                                    <div  className="">
+                                        <Link className={pathname === '/' ? 'py-2  text-[#ffb300] font-bold text-[12px]' : 'py-2 no-underline text-neutral-700 font-bold text-[12px]'} href={'/'}>Home</Link>
+                                       
+                                    </div>
+                                    <div  className="">
+                                        <Link className={pathname === '/profile' ? 'py-2 text-[#ffb300] font-bold text-[12px]' : 'py-2 no-underline text-neutral-700  font-bold text-[12px]'} href={'/profile'}>Profile</Link>
+                                      
+                                    </div>
+                                    <div  className="">
+
+                                        <Link className={pathname === '/destination' ? 'py-2  text-[#ffb300] font-bold text-[12px]' : 'py-2 no-underline text-neutral-700 text-[12px] font-bold'} href={'/destination'}>Destinations</Link>
+                                       
+                                    </div>
+                                    <div  className="">
+                                        <Link className={pathname === '/mybooking' ? 'py-2  text-[#ffb300] font-bold text-[12px]' : 'py-2 no-underline text-neutral-700 font-bold text-[12px]'} href={'/mybooking'}>My Bookings</Link>
+                                        
+                                    </div>
+                                    <div  className="">
+                                        <Link className={pathname === '/add-destination' ? 'py-2 text-[12px]  text-[#ffb300] font-bold' : 'py-2 no-underline text-neutral-700 font-bold text-[12px]'} href={'/add-destination'}>Add Destinations</Link>
+                                       
+                                    </div>
+                                </div>
+                           
+                   
 
 
 
@@ -112,10 +111,10 @@ export function Nabvar() {
                             </ul> :
                                 <ul className="flex gap-2">
                                     <li>
-                                        <Link className={'no-underline'} href="/login">Login</Link>
+                                        <Link className={'no-underline'} href="/login"><Button className={'rounded-md text-white'} variant="outline">Login</Button></Link>
                                     </li>
                                     <li>
-                                        <Link className={'no-underline'} href="/singup">Sing Up</Link>
+                                        <Link className={'no-underline'} href="/singup"><Button className={'rounded-md text-white'} variant="outline">Sing Up</Button></Link>
                                     </li>
                                 </ul>
                         }

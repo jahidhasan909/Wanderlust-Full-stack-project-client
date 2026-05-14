@@ -8,7 +8,7 @@ const Banner = () => {
         <div className=" text-white  flex justify-between flex-col items-center  gap-5 relative overflow-hidden">
             <Image src={'https://images.unsplash.com/photo-1502602898657-3e91760cbb34'} height={900} width={1200} className="w-full h-[900px]  object-cover relative overflow-hidden" alt="banner"></Image>
 
-            <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/75"></div>
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/55 to-black/75"></div>
             <div className=" absolute top-1/2 left-1/5 -translate-1/2">
                 <div className="p-10  flex justify-center flex-col items-center gap-3.5 flex-1">
                     <div>
