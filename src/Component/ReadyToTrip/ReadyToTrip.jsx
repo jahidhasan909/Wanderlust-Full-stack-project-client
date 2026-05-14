@@ -8,11 +8,12 @@ const ReadyToTrip = () => {
         <div className=' relative'>
             
 
-            <Image className='w-full  object-cover relative overflow-hidden' src={'/assets/CTA.png'} width={1200} height={150} alt=''></Image>
+            <Image className='w-full  object-cover relative h-[420px] overflow-hidden' src={'/assets/CTA.png'} width={1200} height={420} alt=''></Image>
+            <div className=' absolute  inset-0 bg-black/60'></div>
             <div className=' absolute top-1/2 left-1/2  -translate-1/2 text-center text-white space-y-1'>
                 <h1 className='text-5xl font-bold leading-tight'>Ready to Start Your Journey?</h1>
-                <p className='text-lg'>Join thousands of travelers who have discovered the world with us</p>
-                <Button className={'rounded-md bg-white '} variant='outline'>BOOK YOUR TRIP TODAY <ArrowRight></ArrowRight></Button>
+                <p className='text-xl'>Join thousands of travelers who have discovered the world with us</p>
+                <Button className={'rounded-md bg-white mt-7 '} variant='outline'>BOOK YOUR TRIP TODAY <ArrowRight></ArrowRight></Button>
             </div>
         </div>
     );
