@@ -4,12 +4,14 @@ import React from 'react';
 
 const DestinationPage = async () => {
 
+    
+
     const res = await fetch('http://localhost:5001/destination')
     const data = await res.json()
 
 
     return (
-        <div className=' mt-35 mb-20   container mx-auto '>
+        <div className=' mt-35 mb-20 container mx-auto '>
             <div className='px-3'>
                 <h1 className=' font-bold text-3xl text-white'>Explore All Destination</h1>
                 <p className='text-neutral-400'>Find your perfect travel experience from our curated collection</p>

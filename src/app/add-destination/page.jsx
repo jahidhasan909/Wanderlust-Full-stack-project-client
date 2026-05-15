@@ -4,21 +4,30 @@ import React, { useRef } from 'react';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { FaWpforms } from "react-icons/fa6";
 import { toast } from 'react-toastify';
+import { authClient } from '@/lib/auth-client';
 
 const AddDestination = () => {
 
     const formRef = useRef(null)
 
-
+    
+    
+ 
+    
     const onSubmit = async (e) => {
         e.preventDefault();
         const formData = new FormData(e.currentTarget)
         const newDestination = Object.fromEntries(formData.entries())
 
+        const { data:token } =await  authClient.token()
+       
+        
+        
         const res = await fetch('http://localhost:5001/destination', {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                authorization:`Bearar ${token?.token}`
             },
             body: JSON.stringify(newDestination)
         })
@@ -47,7 +56,7 @@ const AddDestination = () => {
                         <div className="md:col-span-2">
                             <TextField name="destinationName" isRequired>
                                 <Label className='text-white'>Destination Name</Label>
-                                <Input placeholder="Bali Paradise" className="rounded-md bg-[#272738af] border border-white/20" />
+                                <Input placeholder="Bali Paradise" className="rounded-md text-white bg-[#272738af] border border-white/20" />
                                 <FieldError />
                             </TextField>
                         </div>
@@ -55,7 +64,7 @@ const AddDestination = () => {
                         {/* Country */}
                         <TextField name="country" isRequired>
                             <Label className='text-white'>Country</Label>
-                            <Input placeholder="Indonesia" className="rounded-md bg-[#272738af] border border-white/20" />
+                            <Input placeholder="Indonesia" className="rounded-md text-white bg-[#272738af] border border-white/20" />
                             <FieldError />
                         </TextField>
 
@@ -68,7 +77,7 @@ const AddDestination = () => {
                                 placeholder="Select category"
                             >
                                 <Label className='text-white'>Category</Label>
-                                <Select.Trigger className="rounded-md bg-[#272738af] border border-white/20">
+                                <Select.Trigger className="rounded-md text-white bg-[#272738af] border border-white/20">
                                     <Select.Value />
                                     <Select.Indicator />
                                 </Select.Trigger>
@@ -76,27 +85,27 @@ const AddDestination = () => {
                                     <ListBox>
                                         <ListBox.Item id="Beach" textValue="Beach" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Beach
-                                            <ListBox.ItemIndicator />
+                                            <ListBox.ItemIndicator className='text-white'/>
                                         </ListBox.Item>
                                         <ListBox.Item id="Mountain" textValue="Mountain" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Mountain
-                                            <ListBox.ItemIndicator />
+                                            <ListBox.ItemIndicator className='text-white'/>
                                         </ListBox.Item>
                                         <ListBox.Item id="City" textValue="City" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             City
-                                            <ListBox.ItemIndicator />
+                                            <ListBox.ItemIndicator className='text-white'/>
                                         </ListBox.Item>
                                         <ListBox.Item id="Adventure" textValue="Adventure" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Adventure
-                                            <ListBox.ItemIndicator />
+                                            <ListBox.ItemIndicator className='text-white'/>
                                         </ListBox.Item>
                                         <ListBox.Item id="Cultural" textValue="Cultural" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Cultural
-                                            <ListBox.ItemIndicator />
+                                            <ListBox.ItemIndicator className='text-white'/>
                                         </ListBox.Item>
                                         <ListBox.Item id="Luxury" textValue="Luxury" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Luxury
-                                            <ListBox.ItemIndicator />
+                                            <ListBox.ItemIndicator className='text-white'/>
                                         </ListBox.Item>
                                     </ListBox>
                                 </Select.Popover>
@@ -109,7 +118,7 @@ const AddDestination = () => {
                             <Input
                                 type="number"
                                 placeholder="1299"
-                                className="rounded-md bg-[#272738af] border border-white/20"
+                                className="rounded-md bg-[#272738af] text-white border border-white/20"
                             />
                             <FieldError />
                         </TextField>
@@ -119,7 +128,7 @@ const AddDestination = () => {
                             <Label className='text-white'>Duration</Label>
                             <Input
                                 placeholder="7 Days / 6 Nights"
-                                className="rounded-md bg-[#272738af] border border-white/20"
+                                className="rounded-md bg-[#272738af] text-white border border-white/20"
                             />
                             <FieldError />
                         </TextField>
@@ -128,7 +137,7 @@ const AddDestination = () => {
                         <div className="md:col-span-2">
                             <TextField name="departureDate" type="date" isRequired>
                                 <Label className='text-white'>Departure Date</Label>
-                                <Input type="date" className="rounded-md bg-[#272738af] border border-white/20 text-gray-400" />
+                                <Input type="date" className="rounded-md bg-[#272738af]  border border-white/20 text-gray-400" />
                                 <FieldError />
                             </TextField>
                         </div>
@@ -140,7 +149,7 @@ const AddDestination = () => {
                                 <Input
                                     type="url"
                                     placeholder="https://example.com/bali-paradise.jpg"
-                                    className="rounded-md bg-[#272738af] border border-white/20"
+                                    className="rounded-md bg-[#272738af] text-white border border-white/20"
                                 />
                                 <FieldError />
                             </TextField>
@@ -152,7 +161,7 @@ const AddDestination = () => {
                                 <Label className='text-white'>Description</Label>
                                 <TextArea
                                     placeholder="Describe the travel experience..."
-                                    className="rounded-md bg-[#272738af] border border-white/20"
+                                    className="rounded-md bg-[#272738af] text-white border border-white/20"
                                 />
                                 <FieldError />
                             </TextField>
