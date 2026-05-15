@@ -13,14 +13,14 @@ const WhyChoose = () => {
                 <h1 className='text-2xl font-bold text-white'>Why Choose Wanderlust</h1>
                 <p className='text-neutral-400 mb-9 mt-2'>Your trusted partner for exceptional travel experiences</p>
                 <div className='grid grid-cols-3 gap-4 max-w-7xl mx-auto'>
-                    <Card className=' rounded-md bg-[#222539] border border-white/10'>
+                    <Card className=' rounded-md bg-[#272738af] border border-white/10'>
                         <div className='p-3 '>
                             <span className='flex justify-center text-[#d09c22]'><AiOutlineSafety size={'30'} /></span>
                         <h2 className='text-xl mt-3 text-white'>Safe & Secure</h2>
                         <p className='text-[13px] text-neutral-400 mt-1 max-w-[300px] mx-auto'>Your safety is our priority with comprehensive travel insurance and 24/7 support.</p>
                         </div>
                     </Card>
-                    <Card className=' rounded-md bg-[#222539] border border-white/10'>
+                    <Card className=' rounded-md bg-[#272738af] border border-white/10'>
                     <div className='p-3 '>
 
                         <span className='flex justify-center text-[#d09c22]'><IoMapOutline size={'30'}/></span>
@@ -29,7 +29,7 @@ const WhyChoose = () => {
                         <p className='text-[13px] text-neutral-400 mt-1 max-w-[300px] mx-auto'>Local experts who bring destinations to life with authentic cultural insights.</p>
                     </div>
                     </Card>
-                    <Card className=' rounded-md bg-[#222539] border border-white/10'>
+                    <Card className=' rounded-md bg-[#272738af] border border-white/10'>
                     <div className='p-3 '>
 
                         <span className='flex justify-center text-[#d09c22]'><BiSupport  size={'30'}/></span>
