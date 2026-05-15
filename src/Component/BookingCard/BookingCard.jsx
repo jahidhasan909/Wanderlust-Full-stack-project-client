@@ -17,7 +17,7 @@ const BookingCard = ({ destination }) => {
     const [departureDate, setDepartureDate] = useState(null)
 
 
-    const handleBook = async() => {
+    const handleBook = async () => {
         const bookingData = {
             userId: user?.id,
             userName: user?.name,
@@ -29,21 +29,22 @@ const BookingCard = ({ destination }) => {
             price,
             departureDate: new Date(departureDate)
         }
-
-        const res=await fetch(`http://localhost:5001/booking`,{
-            method:'POST',
-            headers:{
-                'content-type':'application/json'
+        const { data: tokenData } = await authClient.token()
+        const res = await fetch(`http://localhost:5001/booking`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                authorization: `Bearar ${tokenData?.token}`
             },
-            body:JSON.stringify(bookingData)
+            body: JSON.stringify(bookingData)
         })
-        const data=res.json()
-       
+        const data = res.json()
+
         if (data) {
-           toast.success(`Mr/MST ${user?.name} your booking successful !`) 
+            toast.success(`Mr/MST ${user?.name} your booking successful !`)
         }
-        
-        
+
+
     }
 
 
