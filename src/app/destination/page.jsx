@@ -11,8 +11,8 @@ const DestinationPage = async () => {
     return (
         <div className=' mt-35 mb-20   container mx-auto '>
             <div className='px-3'>
-                <h1 className=' font-bold text-3xl'>Explore All Destination</h1>
-                <p className='text-neutral-500'>Find your perfect travel experience from our curated collection</p>
+                <h1 className=' font-bold text-3xl text-white'>Explore All Destination</h1>
+                <p className='text-neutral-400'>Find your perfect travel experience from our curated collection</p>
             </div>
             <div>
                 <DropDown></DropDown>

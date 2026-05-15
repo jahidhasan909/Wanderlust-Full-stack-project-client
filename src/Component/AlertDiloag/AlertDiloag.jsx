@@ -33,15 +33,15 @@ export function AlertDelete({data}) {
             <Button className={'rounded-md text-red-400 border-red-400'} variant="outline"><TrashBin></TrashBin> Delete</Button>
             <AlertDialog.Backdrop>
                 <AlertDialog.Container>
-                    <AlertDialog.Dialog className="sm:max-w-[400px] rounded-md">
+                    <AlertDialog.Dialog className="sm:max-w-[400px] border bg-[#272738af] border-white/20 rounded-md">
                         <AlertDialog.CloseTrigger />
                         <AlertDialog.Header>
                             <AlertDialog.Icon status="danger" />
-                            <AlertDialog.Heading>Delete package permanently?</AlertDialog.Heading>
+                            <AlertDialog.Heading className="text-white">Delete package permanently?</AlertDialog.Heading>
                         </AlertDialog.Header>
                         <AlertDialog.Body>
-                            <p>
-                                This will permanently delete <strong className="font-bold text-black">{destinationName}</strong> and all of its
+                            <p className="text-gray-400">
+                                This will permanently delete <strong className="font-bold text-[#b38b6d]">{destinationName}</strong> and all of its
                                 data. This action cannot be undone.
                             </p>
                         </AlertDialog.Body>

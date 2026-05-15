@@ -46,9 +46,9 @@ const SingupPage = () => {
 
     return (
         <div className="max-w-2xl mx-auto mt-35 mb-20 ">
-            <h1 className="text-center text-3xl font-semibold">Create Account</h1>
-            <p className="text-center text-neutral-500">Start your adventure with Wanderlust</p>
-            <Card className=" rounded-md my-3">
+            <h1 className="text-center text-3xl font-semibold text-white">Create Account</h1>
+            <p className="text-center text-neutral-400">Start your adventure with Wanderlust</p>
+            <Card className=" rounded-md my-3 bg-[#272738af] border border-white/20">
 
                 <Form className="max-w-2xl flex flex-col gap-4 p-2" onSubmit={onSubmit}>
                     <TextField
@@ -56,8 +56,8 @@ const SingupPage = () => {
                         name="name"
                         type="text"
                     >
-                        <Label>Name</Label>
-                        <Input className={'rounded-md'} placeholder="Enter your name" />
+                        <Label className="text-white">Name</Label>
+                        <Input className={'rounded-md bg-[#272738ee] border-white/20 border'} placeholder="Enter your name" />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -65,8 +65,8 @@ const SingupPage = () => {
                         name="image"
                         type="url"
                     >
-                        <Label>Image Url</Label>
-                        <Input className={'rounded-md'} placeholder="https//:.." />
+                        <Label className="text-white">Image Url</Label>
+                        <Input className={'rounded-md bg-[#272738ee] border-white/20 border'} placeholder="https//:.." />
                         <FieldError />
                     </TextField>
 
@@ -83,8 +83,8 @@ const SingupPage = () => {
                             return null;
                         }}
                     >
-                        <Label>Email</Label>
-                        <Input placeholder="john@example.com" />
+                        <Label className="text-white">Email</Label>
+                        <Input placeholder="john@example.com" className={'bg-[#272738ee] border-white/20 border rounded-md'} />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -99,30 +99,30 @@ const SingupPage = () => {
                             return null;
                         }}
                     >
-                        <Label>Password</Label>
-                        <Input className={'rounded-md'} placeholder="Enter your password" />
+                        <Label className="text-white">Password</Label>
+                        <Input className={'rounded-md bg-[#272738ee] border-white/20 border'} placeholder="Enter your password" />
                         
                         <FieldError />
                     </TextField>
 
-                    <Button type="submit" variant="outline" className={'bg-linear-to-r from-[#cfa36d] to-[#be8d1f] rounded-md w-full text-white'}>
+                    <Button type="submit" variant="outline" className={'bg-linear-to-r from-[#b38b6d] to-[#af8068] rounded-md w-full text-white'}>
                         Create Account
                     </Button>
 
                 </Form>
                 <div className="flex justify-center items-center gap-3 mx-2">
-                    <Separator />
-                    <div className=" whitespace-nowrap text-neutral-500">
+                    <Separator className="bg-white/20"/>
+                    <div className=" whitespace-nowrap text-neutral-400">
                         Or sign up with
                     </div>
-                    <Separator />
+                    <Separator  className="bg-white/20"/>
                 </div>
-                <Button onClick={handleGoogleSingup} variant="outline" className={'w-full rounded-md'}>
+                <Button onClick={handleGoogleSingup} variant="outline" className={'w-full rounded-md bg-[#272738af] text-white border-white/20'}>
                     <FcGoogle />
                     Sign Up With Google
                 </Button>
 
-                <span className="text-center text-neutral-500">Already have an account? <Link href={'/login'}><span className="text-[#d09c22] font-semibold">Log In</span></Link></span>
+                <span className="text-center text-neutral-400">Already have an account? <Link href={'/login'}><span className="text-[#b38b6d] font-semibold">Log In</span></Link></span>
             </Card>
         </div>
     );

@@ -43,37 +43,37 @@ const EditModal = ({ data }) => {
     return (
         <div>
             <Modal className={''}>
-                <Button className={'rounded-md border-gray-300'} variant='outline'><MdEditLocationAlt /> Edit</Button>
+                <Button className={'rounded-md text-[#b38b6d] border-[#b38b6d]'} variant='outline'><MdEditLocationAlt /> Edit</Button>
                 <Modal.Backdrop>
                     <Modal.Container placement="auto">
-                        <Modal.Dialog className="sm:max-w-md md:max-w-3xl rounded-md">
+                        <Modal.Dialog className="sm:max-w-md md:max-w-3xl rounded-md border bg-[#272738af] border-white/20">
                             <Modal.CloseTrigger />
                             <Modal.Header>
 
-                                <Modal.Heading className='flex items-center gap-1 font-bold text-xl'><MdEditLocationAlt /> Update Travel Package</Modal.Heading>
+                                <Modal.Heading className='flex items-center gap-1 font-bold text-xl text-white'><span className='text-[#b38b6d]'><MdEditLocationAlt /></span> Update Travel Package</Modal.Heading>
 
                             </Modal.Header>
                             <Modal.Body className="p-6">
-                                <Surface variant="default">
+                                <Surface variant="" className='bg-[#272738af]'>
                                     <form
 
                                         onSubmit={onSubmit}
-                                        className="p-10 space-y-8 "
+                                        className="p-10 space-y-8"
                                     >
                                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                                             {/* Destination Name */}
                                             <div className="md:col-span-2">
                                                 <TextField defaultValue={destinationName} name="destinationName" isRequired>
-                                                    <Label>Destination Name</Label>
-                                                    <Input placeholder="Bali Paradise" className="rounded-md" />
+                                                    <Label className='text-white'>Destination Name</Label>
+                                                    <Input placeholder="Bali Paradise" className="rounded-md text-white bg-[#272738] border border-white/20" />
                                                     <FieldError />
                                                 </TextField>
                                             </div>
 
                                             {/* Country */}
                                             <TextField defaultValue={country} name="country" isRequired>
-                                                <Label>Country</Label>
-                                                <Input placeholder="Indonesia" className="rounded-md" />
+                                                <Label className='text-white'>Country</Label>
+                                                <Input placeholder="Indonesia" className="rounded-md text-white bg-[#272738af] border border-white/20" />
                                                 <FieldError />
                                             </TextField>
 
@@ -86,36 +86,36 @@ const EditModal = ({ data }) => {
                                                     className="w-full"
                                                     placeholder="Select category"
                                                 >
-                                                    <Label>Category</Label>
-                                                    <Select.Trigger className="rounded-md">
+                                                    <Label className='text-white'>Category</Label>
+                                                    <Select.Trigger className="rounded-md bg-[#272738af] text-white border border-white/20">
                                                         <Select.Value />
                                                         <Select.Indicator />
                                                     </Select.Trigger>
-                                                    <Select.Popover>
+                                                    <Select.Popover className={'bg-[#272738] border border-white/20 text-white'}>
                                                         <ListBox>
-                                                            <ListBox.Item id="Beach" textValue="Beach">
+                                                            <ListBox.Item id="Beach" textValue="Beach" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                                                 Beach
-                                                                <ListBox.ItemIndicator />
+                                                                <ListBox.ItemIndicator className='text-white'/>
                                                             </ListBox.Item>
-                                                            <ListBox.Item id="Mountain" textValue="Mountain">
+                                                            <ListBox.Item id="Mountain" textValue="Mountain" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                                                 Mountain
-                                                                <ListBox.ItemIndicator />
+                                                                <ListBox.ItemIndicator className='text-white'/>
                                                             </ListBox.Item>
-                                                            <ListBox.Item id="City" textValue="City">
+                                                            <ListBox.Item id="City" textValue="City" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                                                 City
-                                                                <ListBox.ItemIndicator />
+                                                                <ListBox.ItemIndicator className='text-white'/>
                                                             </ListBox.Item>
-                                                            <ListBox.Item id="Adventure" textValue="Adventure">
+                                                            <ListBox.Item id="Adventure" textValue="Adventure" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                                                 Adventure
-                                                                <ListBox.ItemIndicator />
+                                                                <ListBox.ItemIndicator className='text-white'/>
                                                             </ListBox.Item>
-                                                            <ListBox.Item id="Cultural" textValue="Cultural">
+                                                            <ListBox.Item id="Cultural" textValue="Cultural" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                                                 Cultural
-                                                                <ListBox.ItemIndicator />
+                                                                <ListBox.ItemIndicator className='text-white'/>
                                                             </ListBox.Item>
-                                                            <ListBox.Item id="Luxury" textValue="Luxury">
+                                                            <ListBox.Item id="Luxury" textValue="Luxury" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                                                 Luxury
-                                                                <ListBox.ItemIndicator />
+                                                                <ListBox.ItemIndicator className='text-white'/>
                                                             </ListBox.Item>
                                                         </ListBox>
                                                     </Select.Popover>
@@ -124,21 +124,21 @@ const EditModal = ({ data }) => {
 
                                             {/* Price */}
                                             <TextField defaultValue={price} name="price" type="number" isRequired>
-                                                <Label>Price (USD)</Label>
+                                                <Label className='text-white'>Price (USD)</Label>
                                                 <Input
                                                     type="number"
                                                     placeholder="1299"
-                                                    className="rounded-md"
+                                                    className="rounded-md bg-[#272738af] border text-white border-white/20"
                                                 />
                                                 <FieldError />
                                             </TextField>
 
                                             {/* Duration */}
                                             <TextField defaultValue={duration} name="duration" isRequired>
-                                                <Label>Duration</Label>
+                                                <Label className='text-white'>Duration</Label>
                                                 <Input
                                                     placeholder="7 Days / 6 Nights"
-                                                    className="rounded-md"
+                                                    className="rounded-md bg-[#272738af] border text-white border-white/20"
                                                 />
                                                 <FieldError />
                                             </TextField>
@@ -146,8 +146,8 @@ const EditModal = ({ data }) => {
                                             {/* Departure Date */}
                                             <div className="md:col-span-2">
                                                 <TextField defaultValue={departureDate} name="departureDate" type="date" isRequired>
-                                                    <Label>Departure Date</Label>
-                                                    <Input type="date" className="rounded-md" />
+                                                    <Label className='text-white'>Departure Date</Label>
+                                                    <Input type="date" className="rounded-md text-white bg-[#272738af] border border-white/20" />
                                                     <FieldError />
                                                 </TextField>
                                             </div>
@@ -155,11 +155,11 @@ const EditModal = ({ data }) => {
                                             {/* Image URL - Removed preview */}
                                             <div className="md:col-span-2">
                                                 <TextField defaultValue={imageUrl} name="imageUrl" isRequired>
-                                                    <Label>Image URL</Label>
+                                                    <Label className='text-white'>Image URL</Label>
                                                     <Input
                                                         type="url"
                                                         placeholder="https://example.com/bali-paradise.jpg"
-                                                        className="rounded-md"
+                                                        className="rounded-md text-white bg-[#272738af] border border-white/20"
                                                     />
                                                     <FieldError />
                                                 </TextField>
@@ -167,11 +167,11 @@ const EditModal = ({ data }) => {
 
                                             {/* Description */}
                                             <div className="md:col-span-2">
-                                                <TextField defaultValue={description} name="description" isRequired>
-                                                    <Label>Description</Label>
+                                                <TextField className={''} defaultValue={description} name="description" isRequired>
+                                                    <Label className='text-white'>Description</Label>
                                                     <TextArea
                                                         placeholder="Describe the travel experience..."
-                                                        className="rounded-md h-[80px]"
+                                                        className="rounded-md text-white h-[80px] bg-[#272738af] border border-white/20"
                                                     />
                                                     <FieldError />
                                                 </TextField>
@@ -185,7 +185,7 @@ const EditModal = ({ data }) => {
                                             type="submit"
                                             variant="outline"
 
-                                            className=" w-full rounded-md bg-cyan-500 text-white"
+                                            className=" w-full rounded-md bg-linear-to-r from-[#b38b6d] to-[#af8068] text-white"
                                         >
                                             <CiSaveUp2 />
                                             Save Changes

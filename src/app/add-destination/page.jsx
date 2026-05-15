@@ -35,8 +35,8 @@ const AddDestination = () => {
 
     return (
         <div className=' container mx-auto mt-35 mb-20 '>
-            <h1 className='font-bold text-3xl mb-5 mt-2 pl-20'>Add New Travel Package</h1>
-            <Card className=' rounded-md shadow-md  bg-white/70 border border-white/70 max-w-7xl mx-auto'>
+            <h1 className='font-bold text-3xl mb-5 mt-2 pl-20 text-white'>Add New Travel Package</h1>
+            <Card className=' rounded-md shadow-md  bg-[#272738af] border border-white/20 max-w-7xl mx-auto'>
                 <form
                     ref={formRef}
                     onSubmit={onSubmit}
@@ -46,16 +46,16 @@ const AddDestination = () => {
                         {/* Destination Name */}
                         <div className="md:col-span-2">
                             <TextField name="destinationName" isRequired>
-                                <Label>Destination Name</Label>
-                                <Input placeholder="Bali Paradise" className="rounded-md" />
+                                <Label className='text-white'>Destination Name</Label>
+                                <Input placeholder="Bali Paradise" className="rounded-md bg-[#272738af] border border-white/20" />
                                 <FieldError />
                             </TextField>
                         </div>
 
                         {/* Country */}
                         <TextField name="country" isRequired>
-                            <Label>Country</Label>
-                            <Input placeholder="Indonesia" className="rounded-md" />
+                            <Label className='text-white'>Country</Label>
+                            <Input placeholder="Indonesia" className="rounded-md bg-[#272738af] border border-white/20" />
                             <FieldError />
                         </TextField>
 
@@ -67,34 +67,34 @@ const AddDestination = () => {
                                 className="w-full"
                                 placeholder="Select category"
                             >
-                                <Label>Category</Label>
-                                <Select.Trigger className="rounded-md">
+                                <Label className='text-white'>Category</Label>
+                                <Select.Trigger className="rounded-md bg-[#272738af] border border-white/20">
                                     <Select.Value />
                                     <Select.Indicator />
                                 </Select.Trigger>
-                                <Select.Popover>
+                                <Select.Popover className={'bg-[#272738f7] border border-white/20 text-white'}>
                                     <ListBox>
-                                        <ListBox.Item id="Beach" textValue="Beach">
+                                        <ListBox.Item id="Beach" textValue="Beach" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Beach
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="Mountain" textValue="Mountain">
+                                        <ListBox.Item id="Mountain" textValue="Mountain" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Mountain
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="City" textValue="City">
+                                        <ListBox.Item id="City" textValue="City" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             City
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="Adventure" textValue="Adventure">
+                                        <ListBox.Item id="Adventure" textValue="Adventure" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Adventure
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="Cultural" textValue="Cultural">
+                                        <ListBox.Item id="Cultural" textValue="Cultural" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Cultural
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
-                                        <ListBox.Item id="Luxury" textValue="Luxury">
+                                        <ListBox.Item id="Luxury" textValue="Luxury" className=' hover:bg-[#272738] hover:border hover:border-white/20'>
                                             Luxury
                                             <ListBox.ItemIndicator />
                                         </ListBox.Item>
@@ -105,21 +105,21 @@ const AddDestination = () => {
 
                         {/* Price */}
                         <TextField name="price" type="number" isRequired>
-                            <Label>Price (USD)</Label>
+                            <Label className='text-white'>Price (USD)</Label>
                             <Input
                                 type="number"
                                 placeholder="1299"
-                                className="rounded-md"
+                                className="rounded-md bg-[#272738af] border border-white/20"
                             />
                             <FieldError />
                         </TextField>
 
                         {/* Duration */}
                         <TextField name="duration" isRequired>
-                            <Label>Duration</Label>
+                            <Label className='text-white'>Duration</Label>
                             <Input
                                 placeholder="7 Days / 6 Nights"
-                                className="rounded-md"
+                                className="rounded-md bg-[#272738af] border border-white/20"
                             />
                             <FieldError />
                         </TextField>
@@ -127,8 +127,8 @@ const AddDestination = () => {
                         {/* Departure Date */}
                         <div className="md:col-span-2">
                             <TextField name="departureDate" type="date" isRequired>
-                                <Label>Departure Date</Label>
-                                <Input type="date" className="rounded-md" />
+                                <Label className='text-white'>Departure Date</Label>
+                                <Input type="date" className="rounded-md bg-[#272738af] border border-white/20 text-gray-400" />
                                 <FieldError />
                             </TextField>
                         </div>
@@ -136,11 +136,11 @@ const AddDestination = () => {
                         {/* Image URL - Removed preview */}
                         <div className="md:col-span-2">
                             <TextField name="imageUrl" isRequired>
-                                <Label>Image URL</Label>
+                                <Label className='text-white'>Image URL</Label>
                                 <Input
                                     type="url"
                                     placeholder="https://example.com/bali-paradise.jpg"
-                                    className="rounded-md"
+                                    className="rounded-md bg-[#272738af] border border-white/20"
                                 />
                                 <FieldError />
                             </TextField>
@@ -149,10 +149,10 @@ const AddDestination = () => {
                         {/* Description */}
                         <div className="md:col-span-2">
                             <TextField name="description" isRequired>
-                                <Label>Description</Label>
+                                <Label className='text-white'>Description</Label>
                                 <TextArea
                                     placeholder="Describe the travel experience..."
-                                    className="rounded-md"
+                                    className="rounded-md bg-[#272738af] border border-white/20"
                                 />
                                 <FieldError />
                             </TextField>
@@ -173,7 +173,7 @@ const AddDestination = () => {
                             type="submit"
                             variant="outline"
 
-                            className=" rounded-md bg-cyan-500 text-white"
+                            className=" rounded-md bg-linear-to-r from-[#b38b6d] to-[#af8068] text-white"
                         >
                             <FaWpforms />
                             Add Travel Package

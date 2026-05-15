@@ -1,9 +1,10 @@
 "use client"
 import { useState } from "react";
-import { Link, Button, Avatar } from "@heroui/react";
+import { Link, Button, Avatar, Spinner } from "@heroui/react";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
+
 
 
 export function Nabvar() {
@@ -16,7 +17,7 @@ export function Nabvar() {
     const user = data?.user
 
     if (isPending) {
-        return <div>Loading...</div>
+        return <div className="flex justify-center items-center bg-[#272738]"><Spinner color="warning" size="lg"/></div>
     }
 
 
@@ -57,41 +58,41 @@ export function Nabvar() {
                         </button>
 
                         <div>
-                            <Image src={'https://i.ibb.co.com/0jqqw095/Screenshot-2026-05-14-at-8-05-31-PM-removebg-preview.png'} height={150} width={150} alt="logo"></Image>
+                            <Image src={'https://i.ibb.co.com/fVw728gG/wanderlust-b9876e-removebg-preview-Picsart-Ai-Image-Enhancer.png'} className="h-[35px] w-full" height={150} width={240} alt="logo"></Image>
                         </div>
 
                     </div>
 
-                    
-
-                        
-                                <div  className="bg-white/50  gap-7 hidden md:flex px-17 uppercase rounded-full py-1 border border-white/80">
 
 
-                                    <div  className="">
-                                        <Link className={pathname === '/' ? 'py-2  text-[#ffb300] font-bold text-[12px]' : 'py-2 no-underline text-neutral-700 font-bold text-[12px]'} href={'/'}>Home</Link>
-                                       
-                                    </div>
-                                    <div  className="">
-                                        <Link className={pathname === '/profile' ? 'py-2 text-[#ffb300] font-bold text-[12px]' : 'py-2 no-underline text-neutral-700  font-bold text-[12px]'} href={'/profile'}>Profile</Link>
-                                      
-                                    </div>
-                                    <div  className="">
 
-                                        <Link className={pathname === '/destination' ? 'py-2  text-[#ffb300] font-bold text-[12px]' : 'py-2 no-underline text-neutral-700 text-[12px] font-bold'} href={'/destination'}>Destinations</Link>
-                                       
-                                    </div>
-                                    <div  className="">
-                                        <Link className={pathname === '/mybooking' ? 'py-2  text-[#ffb300] font-bold text-[12px]' : 'py-2 no-underline text-neutral-700 font-bold text-[12px]'} href={'/mybooking'}>My Bookings</Link>
-                                        
-                                    </div>
-                                    <div  className="">
-                                        <Link className={pathname === '/add-destination' ? 'py-2 text-[12px]  text-[#ffb300] font-bold' : 'py-2 no-underline text-neutral-700 font-bold text-[12px]'} href={'/add-destination'}>Add Destinations</Link>
-                                       
-                                    </div>
-                                </div>
-                           
-                   
+                    <div className="bg-[#272738af] gap-7 hidden md:flex px-17 uppercase rounded-full py-1 border border-white/30">
+
+
+                        <div className="">
+                            <Link className={pathname === '/' ? 'py-2  text-[#b9876e] font-bold text-[12px]' : 'py-2 no-underline text-neutral-400 font-semibold text-[12px]'} href={'/'}>Home</Link>
+
+                        </div>
+                        <div className="">
+                            <Link className={pathname === '/profile' ? 'py-2 text-[#b9876e] font-bold text-[12px]' : 'py-2 no-underline text-neutral-400  font-semibold text-[12px]'} href={'/profile'}>Profile</Link>
+
+                        </div>
+                        <div className="">
+
+                            <Link className={pathname === '/destination' ? 'py-2  text-[#b9876e] font-bold text-[12px]' : 'py-2 no-underline text-neutral-400 text-[12px] font-semibold'} href={'/destination'}>Destinations</Link>
+
+                        </div>
+                        <div className="">
+                            <Link className={pathname === '/mybooking' ? 'py-2  text-[#b9876e] font-bold text-[12px]' : 'py-2 no-underline text-neutral-400 font-semibold text-[12px]'} href={'/mybooking'}>My Bookings</Link>
+
+                        </div>
+                        <div className="">
+                            <Link className={pathname === '/add-destination' ? 'py-2 text-[12px]  text-[#b9876e] font-bold' : 'py-2 no-underline text-neutral-400 font-semibold text-[12px]'} href={'/add-destination'}>Add Destinations</Link>
+
+                        </div>
+                    </div>
+
+
 
 
 
@@ -107,14 +108,14 @@ export function Nabvar() {
                                         <Avatar.Fallback>{user?.name.charAt(0, 2)}</Avatar.Fallback>
                                     </Avatar>
                                 </Link>
-                                <li > <Button className={'rounded-md text-[#d09c22] border-[#d09c22]'} variant="outline" onClick={() => authClient.signOut()}>SingOut</Button> </li>
+                                <li > <Button className={'rounded-md text-[#b9876e] border-[#b9876e]'} variant="outline" onClick={() => authClient.signOut()}>SingOut</Button> </li>
                             </ul> :
                                 <ul className="flex gap-2">
                                     <li>
-                                        <Link className={'no-underline'} href="/login"><Button className={'rounded-md text-[#d09c22] border-[#d09c22]'} variant="outline">Login</Button></Link>
+                                        <Link className={'no-underline'} href="/login"><Button className={'rounded-md text-[#b9876e] border-[#b9876e]'} variant="outline">Login</Button></Link>
                                     </li>
                                     <li>
-                                        <Link className={'no-underline'} href="/singup"><Button className={'rounded-md text-[#d09c22] border-[#d09c22]'} variant="outline">Sing Up</Button></Link>
+                                        <Link className={'no-underline'} href="/singup"><Button className={'rounded-md text-[#b9876e] border-[#b9876e]'} variant="outline">Sing Up</Button></Link>
                                     </li>
                                 </ul>
                         }

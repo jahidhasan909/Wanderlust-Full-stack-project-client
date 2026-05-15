@@ -1,9 +1,9 @@
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 px-6 md:px-16 py-16">
+    <footer className="bg-black text-gray-400 px-6 md:px-16 py-16 border-t border-white/20">
       <div className="max-w-7xl mx-auto">
         <div className="mb-12">
-          <h1 className="text-6xl md:text-7xl font-bold text-white">
+          <h1 className="text-6xl md:text-7xl font-bold text-[#b9876e]">
             Wanderlust
           </h1>
           <p className="mt-4 max-w-xl">
@@ -26,7 +26,7 @@ const Footer = () => {
                 placeholder="Enter email"
                 className="bg-transparent outline-none flex-1 text-sm"
               />
-              <span className="text-white text-lg">↗</span>
+              <span className="text-[#b9876e] text-lg">↗</span>
             </div>
           </div>
 
@@ -72,9 +72,9 @@ const Footer = () => {
           </p>
 
           <div className="flex gap-5 mt-4 md:mt-0 text-white text-lg">
-            <span className="cursor-pointer">X</span>
-            <span className="cursor-pointer">in</span>
-            <span className="cursor-pointer">◎</span>
+            <span className="cursor-pointer text-[#b9876e]">X</span>
+            <span className="cursor-pointer text-[#b9876e]">in</span>
+            <span className="cursor-pointer text-[#b9876e]">◎</span>
           </div>
         </div>
       </div>

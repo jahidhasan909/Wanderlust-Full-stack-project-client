@@ -51,23 +51,23 @@ const BookingCard = ({ destination }) => {
 
     return (
         <div className='col-span-2'>
-            <Card className=' rounded-md  bg-white/40 border border-white/70'>
+            <Card className=' rounded-md  bg-[#272738ee] border-white/20 border'>
                 <div>
-                    <p className='text-neutral-500'>Starting from</p>
-                    <h3 className='text-xl text-cyan-500'>${price}</h3>
-                    <p className='text-neutral-500'>per person</p>
+                    <p className='text-neutral-400'>Starting from</p>
+                    <h3 className='text-xl text-[#b38b6d]'>${price}</h3>
+                    <p className='text-neutral-400'>per person</p>
                 </div>
-                <DateField onChange={setDepartureDate} className=" rounded-md" name="date">
-                    <Label>Departure Date</Label>
-                    <DateField.Group>
+                <DateField onChange={setDepartureDate} className="" name="date">
+                    <Label className='text-white'>Departure Date</Label>
+                    <DateField.Group className={'border bg-[#272738af] border-white/20  rounded-none'}>
                         <DateField.Input>{(segment) => <DateField.Segment segment={segment} />}</DateField.Input>
                         <DateField.Suffix>
                             <Calendar className="size-4 text-muted" />
                         </DateField.Suffix>
                     </DateField.Group>
                 </DateField>
-                <Button onClick={handleBook} className={' rounded-md bg-cyan-500 text-white w-full'} variant='outline'>Book Now <FaArrowRightLong /></Button>
-                <ul className=' list-disc text-[13px] text-neutral-500'>
+                <Button onClick={handleBook} className={' rounded-md bg-linear-to-r from-[#b38b6d] to-[#af8068] text-white w-full'} variant='outline'>Book Now <FaArrowRightLong /></Button>
+                <ul className=' list-disc text-[13px] text-neutral-400'>
                     <li>Free cancellation up to 7 days</li>
                     <li>Travel insurance included</li>
                     <li>24/7 customer support</li>

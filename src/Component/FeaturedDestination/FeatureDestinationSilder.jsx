@@ -58,7 +58,7 @@ beforeChange: (prev, next) => setCurrentSlide(next),
         <div
             className={`w-8 p-1.5 border rounded-sm transition-all duration-300 ${
                 i === currentSlide 
-                ? "bg-cyan-500 border-cyan-500 text-white" // Active styles
+                ? "bg-[#b38b6d] border-[#b38b6d] text-white" // Active styles
                 : "border-neutral-500 text-neutral-500"    // Inactive styles
             }`}
         >
@@ -71,28 +71,28 @@ beforeChange: (prev, next) => setCurrentSlide(next),
         <div className="my-25 max-w-11/13 mx-auto">
             <div className="flex justify-between">
                 <div>
-                    <h1 className="font-bold text-2xl">Featured Destinations</h1>
-                    <p className="text-neutral-500">Handpicked travel experiences for the adventure seekers</p>
+                    <h1 className="font-bold text-2xl text-white">Featured Destinations</h1>
+                    <p className="text-neutral-400">Handpicked travel experiences for the adventure seekers</p>
                 </div>
                 <Link href={'/destination'}>
-                    <Button variant="outline" className={'rounded-none text-cyan-500 border-cyan-500'}>ALL DESTINATIONS <ArrowRight></ArrowRight></Button></Link>
+                    <Button variant="outline" className={'rounded-none text-[#b38b6d] border-[#b38b6d]'}>ALL DESTINATIONS <ArrowRight></ArrowRight></Button></Link>
             </div >
             <Slider {...settings} className="">
                 {
                     sliceDestination.map(destination => <div key={destination._id} className="max-w-xl pr-4 mb-7 mt-4">
-                        <Card variant="" className={'rounded-md bg-white/40 border-white/70  border'}>
+                        <Card variant="" className={'rounded-md bg-[#272738af] border border-white/20'}>
                             <Image src={destination.imageUrl} className='w-full object-cover rounded-md h-[260px]' height={260} width={220} alt={destination.destinationName}></Image>
-                            <span className='flex items-center gap-1 text-neutral-500'><SlLocationPin /> {destination.country}</span>
+                            <span className='flex items-center gap-1 text-neutral-400'><span className="text-[#b38b6d]"><SlLocationPin /></span> {destination.country}</span>
                             <Card.Header className='flex flex-row items-center  justify-between'>
                                 <div className=' space-y-2'>
-                                    <Card.Title className='text-[1.25rem]'>{destination.destinationName}</Card.Title>
-                                    <Card.Description>{destination.duration}</Card.Description>
-                                    <Link href={`/destination/${destination._id}`} className='flex items-center gap-1 underline text-cyan-500'>
+                                    <Card.Title className='text-[1.25rem] text-white'>{destination.destinationName}</Card.Title>
+                                    <Card.Description className="text-gray-400">{destination.duration}</Card.Description>
+                                    <Link href={`/destination/${destination._id}`} className='flex items-center gap-1 underline text-[#b38b6d]'>
                                         Book Now
                                         <ArrowUpRight />
                                     </Link>
                                 </div>
-                                <h3 className='text-[1.10rem]'>${destination.price}/Person</h3>
+                                <h3 className='text-[1.10rem] text-[#b38b6d]'>${destination.price}/Person</h3>
                             </Card.Header>
                         </Card>
                     </div>)

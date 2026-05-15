@@ -19,7 +19,7 @@ const TravelarsSay = () => {
                                     {'" The Bali trip was absolutely magical! Every detail was perfectly planned. The resorts were luxurious and the cultural experiences were unforgettable. "'}
                                 </h2>
                                 <div className="mt-10">
-                                    <p className="text-[#d09c22]"> — Michael Chen</p>
+                                    <p className="text-[#b9876e]"> — Michael Chen</p>
                                     <p className="pl-5 text-neutral-400">Singapore</p>
                                 </div>
                             </div>
@@ -34,7 +34,7 @@ const TravelarsSay = () => {
                                     {'" Swiss Alps adventure exceeded all expectations. The mountain views were breathtaking and our guide was incredibly knowledgeable. Highly recommend! "'}
                                 </h2>
                                 <div className="mt-10">
-                                    <p className="text-[#d09c22]"> — Sarah Johnson</p>
+                                    <p className="text-[#b9876e]"> — Sarah Johnson</p>
                                     <p className="pl-5 text-neutral-400">New York, USA</p>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ const TravelarsSay = () => {
                                     {'" The Italy trip was absolutely magical! Every detail was perfectly planned. The resorts were luxurious and the cultural experiences were unforgettable. "'}
                                 </h2>
                                 <div className="mt-15">
-                                    <p className="text-[#d09c22]"> — Jhon Doe</p>
+                                    <p className="text-[#b9876e]"> — Jhon Doe</p>
                                     <p className="pl-5 text-neutral-400">Paris</p>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@ const TravelarsSay = () => {
                                     {'" Swiss Alps adventure exceeded all expectations. The beach views were breathtaking and our guide was incredibly knowledgeable. Highly recommend! "'}
                                 </h2>
                                 <div className="mt-10">
-                                    <p className="text-[#d09c22]"> — Adv Aderson</p>
+                                    <p className="text-[#b9876e]"> — Adv Aderson</p>
                                     <p className="pl-5 text-neutral-400">Finland</p>
                                 </div>
                             </div>

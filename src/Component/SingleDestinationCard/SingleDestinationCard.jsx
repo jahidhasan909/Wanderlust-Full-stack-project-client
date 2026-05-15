@@ -14,10 +14,10 @@ import BookingCard from '../BookingCard/BookingCard';
 const SingleDestinationCard = ({ data }) => {
     const { destinationName, country, price, duration, departureDate, imageUrl, description } = data
     return (
-        <div className='my-10'>
+        <div className='mt-35 mb-20'>
             <div className='flex justify-between items-center p-1 my-4'>
-                <Link href={'/destination'} className='flex items-center gap-1 underline text-neutral-600'>
-                    <ArrowUpLeft></ArrowUpLeft>
+                <Link href={'/destination'} className='flex items-center gap-1 underline text-neutral-400'>
+                   <span className='text-[#b38b6d]'> <ArrowUpLeft></ArrowUpLeft> </span>
                     Back to Destinations
                 </Link>
                 <div className='flex items-center gap-2'>
@@ -25,16 +25,16 @@ const SingleDestinationCard = ({ data }) => {
                     <EditModal data={data}></EditModal>
                 </div>
             </div>
-            <Card variant="" className={'rounded-md bg-white/50 border-white/70 border'}>
+            <Card variant="" className={'rounded-md bg-linear-to-r bg-[#272738ee] border-white/20 border'}>
                 <Image src={imageUrl} className='w-full rounded-md h-[500px] object-cover' height={500} width={1000} alt={destinationName}></Image>
-                <span className='flex items-center gap-1 text-neutral-500 mt-3'><SlLocationPin /> {country}</span>
+                <span className='flex items-center gap-1 text-neutral-400 mt-3'><span className='text-[#b38b6d]'><SlLocationPin /> </span> {country}</span>
                 <Card.Header className='grid grid-cols-12 gap-4  justify-between'>
                     <div className=' space-y-2 col-span-10 mt-4'>
-                        <Card.Title className='text-2xl font-semibold'>{destinationName}</Card.Title>
-                        <Card.Description>{duration}</Card.Description>
+                        <Card.Title className='text-2xl font-semibold text-white'>{destinationName}</Card.Title>
+                        <Card.Description className='text-gray-400'>{duration}</Card.Description>
 
-                        <h2 className='text-2xl font-semibold'>Overview</h2>
-                        <p className='text-neutral-500'>{description}</p>
+                        <h2 className='text-2xl font-semibold text-white'>Overview</h2>
+                        <p className='text-neutral-400'>{description}</p>
                     </div>
                     
                     <BookingCard className={''} destination={data}></BookingCard>

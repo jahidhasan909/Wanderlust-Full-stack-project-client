@@ -44,11 +44,11 @@ const LogInPage = () => {
 
     return (
         <div className="max-w-2xl mx-auto mt-35 mb-20 ">
-            <h1 className="text-center text-3xl font-bold">Welcome Back</h1>
-            <p className="text-center text-neutral-500">Resume your adventure with Wanderlust</p>
-            <Card className=" rounded-md my-3">
+            <h1 className="text-center text-3xl font-bold text-white">Welcome Back</h1>
+            <p className="text-center text-neutral-400">Resume your adventure with Wanderlust</p>
+            <Card className=" rounded-md my-3 bg-[#272738af] border-white/20 border">
 
-                <Form className="max-w-2xl flex flex-col gap-4 p-2" onSubmit={onSubmit}>
+                <Form className="max-w-2xl flex flex-col gap-4 p-2 " onSubmit={onSubmit}>
                     <TextField
                         isRequired
                         name="email"
@@ -60,8 +60,8 @@ const LogInPage = () => {
                             return null;
                         }}
                     >
-                        <Label>Email</Label>
-                        <Input className={'rounded-md'} placeholder="john@example.com" />
+                        <Label className="text-white">Email</Label>
+                        <Input className={'rounded-md bg-[#272738ee] border-white/20 border'} placeholder="john@example.com" />
                         <FieldError />
                     </TextField>
                     <TextField
@@ -77,29 +77,29 @@ const LogInPage = () => {
                             return null;
                         }}
                     >
-                        <Label>Password</Label>
-                        <Input className={'rounded-md'} placeholder="Enter your password" />
+                        <Label className="text-white">Password</Label>
+                        <Input className={'rounded-md  bg-[#272738ee] border-white/20 border'} placeholder="Enter your password" />
                         <FieldError />
                     </TextField>
 
-                    <Button type="submit" variant="outline" className={'bg-linear-to-r from-[#cfa36d] to-[#be8d1f] rounded-md w-full text-white'}>
+                    <Button type="submit" variant="outline" className={'bg-linear-to-r from-[#b38b6d] to-[#af8068] rounded-md w-full text-white'}>
                         Log In
                     </Button>
 
                 </Form>
                 <div className="flex justify-center items-center gap-3 mx-2">
-                    <Separator />
-                    <div className=" whitespace-nowrap text-neutral-500">
+                    <Separator className="bg-white/20"/>
+                    <div className=" whitespace-nowrap text-neutral-400">
                         Or continue with
                     </div>
-                    <Separator />
+                    <Separator className="bg-white/20"/>
                 </div>
-                <Button onClick={handleGoogleLogin} variant="outline" className={'w-full rounded-md'}>
+                <Button onClick={handleGoogleLogin} variant="outline" className={'w-full rounded-md text-white bg-[#272738af]  border-white/20'}>
                     <FcGoogle />
                     Log In With Google
                 </Button>
 
-                <span className="text-center text-neutral-500"><span>{"Don't have an account?"}</span> <Link href={'/singup'}><span className="text-[#d09c22] font-semibold">Sign Up</span></Link></span>
+                <span className="text-center text-neutral-400"><span>{"Don't have an account?"}</span> <Link href={'/singup'}><span className="text-[#b38b6d] font-semibold">Sign Up</span></Link></span>
             </Card>
         </div>
     );
