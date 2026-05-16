@@ -24,11 +24,11 @@ import { SlLocationPin } from "react-icons/sl";
 function AppendDots() {
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    const [sliceDestination, setSilceDestination] = useState([])
+    const [featuredData,setFeaturedData]=useState([])
     useEffect(() => {
-        fetch(`http://localhost:5001/destination`)
+        fetch(`http://localhost:5001/featured`)
             .then(res => res.json())
-            .then(data => setSilceDestination(data.slice(0, 5)))
+            .then(data => setFeaturedData(data))
     }, [])
 
 
@@ -79,7 +79,7 @@ beforeChange: (prev, next) => setCurrentSlide(next),
             </div >
             <Slider {...settings} className="">
                 {
-                    sliceDestination.map(destination => <div key={destination._id} className="max-w-xl pr-4 mb-7 mt-4">
+                    featuredData.map(destination => <div key={destination._id} className="max-w-xl pr-4 mb-7 mt-4">
                         <Card variant="" className={'rounded-md bg-[#272738af] border border-white/20'}>
                             <Image src={destination.imageUrl} className='w-full object-cover rounded-md h-[260px]' height={260} width={220} alt={destination.destinationName}></Image>
                             <span className='flex items-center gap-1 text-neutral-400'><span className="text-[#b38b6d]"><SlLocationPin /></span> {destination.country}</span>

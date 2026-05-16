@@ -2,9 +2,11 @@ import DestinationCard from '@/Component/DestinationCard/DestinationCard';
 import DropDown from '@/Component/DropDown/DropDown';
 import React from 'react';
 
+import DestinationMotion from '@/Component/DestinationCard/DestinationMotion';
+
 const DestinationPage = async () => {
 
-    
+
 
     const res = await fetch('http://localhost:5001/destination')
     const data = await res.json()
@@ -20,9 +22,8 @@ const DestinationPage = async () => {
                 <DropDown></DropDown>
             </div>
             <div className=' container mx-auto grid grid-cols-4 my-10 gap-4'>
-                {
-                    data.map(destination => <DestinationCard key={destination._id} destination={destination}></DestinationCard>)
-                }
+
+                <DestinationMotion data={data}></DestinationMotion>
             </div>
         </div>
     );
