@@ -32,9 +32,9 @@ const ProfilePage = () => {
     return (
         <div className='container mx-auto mt-35 mb-20'>
             <h1 className='font-bold text-3xl text-center text-white'>My Profile</h1>
-            <p className='text-neutral-400 text-center'>Manage your account settings and travel preferences</p>
+            <p className='text-neutral-400 text-center mt-2 '>Manage your account settings and travel preferences</p>
 
-            <div className='grid grid-cols-2 py-2 px-3 my-6 max-w-6xl gap-3 mx-auto'>
+            <div className='grid grid-cols-1 lg:grid-cols-2 py-2 px-3 my-6 max-w-6xl gap-3 mx-auto'>
                 <Card className=' rounded-md flex  items-center bg-[#272738af] border border-white/20'>
                     <div className='flex flex-col  items-center py-10'>
                         <Avatar className='h-30 w-30 rounded-full' size=''>

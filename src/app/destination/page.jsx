@@ -15,13 +15,13 @@ const DestinationPage = async () => {
     return (
         <div className=' mt-35 mb-20 container mx-auto '>
             <div className='px-3'>
-                <h1 className=' font-bold text-3xl text-white'>Explore All Destination</h1>
-                <p className='text-neutral-400'>Find your perfect travel experience from our curated collection</p>
+                <h1 className=' font-bold text-xl lg:text-3xl text-white'>Explore All Destination</h1>
+                <p className='text-neutral-400 mt-2 text-xs lg:text-[1.10rem]'>Find your perfect travel experience from our curated collection</p>
             </div>
             <div>
                 <DropDown></DropDown>
             </div>
-            <div className=' container mx-auto grid grid-cols-4 my-10 gap-4'>
+            <div className=' container mx-auto grid grid-cols-1 lg:grid-cols-4 my-10 gap-4'>
 
                 <DestinationMotion data={data}></DestinationMotion>
             </div>

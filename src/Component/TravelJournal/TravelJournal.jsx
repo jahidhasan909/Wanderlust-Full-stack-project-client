@@ -7,14 +7,14 @@ import { FaRegCalendarAlt } from "react-icons/fa";
 
 const TravelJournal = () => {
     return (
-        <div className=' max-w-5xl mx-auto my-35'>
+        <div className='hidden md:block  md:max-w-3xl lg:max-w-5xl mx-auto my-35'>
             <div className='flex justify-between items-center'>
                 <div className='mb-5 space-y-1'>
                     <p className='text-[#b9876e] uppercase text-[14px]'>Travel Journal</p>
-                    <h1 className='text-white text-2xl'>Latest from our blog</h1>
-                    <p className='text-neutral-300'>insights,guides,and inspiration for the discerning traveler</p>
+                    <h1 className='text-white text-3xl mt-2'>Latest from our blog</h1>
+                    <p className='text-neutral-300 mt-2 text-[1.10rem]'>insights,guides,and inspiration for the discerning traveler</p>
                 </div>
-                <Button variant='outline' className={' uppercase rounded-none text-[#b9876e] border-[#b9876e]'}>view all articles <ArrowRight></ArrowRight></Button>
+                <Button variant='outline' className={' uppercase mt-5 rounded-none text-[#b9876e] border-[#b9876e]'}>view all articles <ArrowRight></ArrowRight></Button>
             </div>
             <section className='grid grid-cols-2 gap-4'>
                 <Card className='bg-[#272738af] rounded-none border-white/20 border'>

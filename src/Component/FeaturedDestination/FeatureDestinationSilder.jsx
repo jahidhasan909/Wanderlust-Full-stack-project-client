@@ -68,18 +68,18 @@ beforeChange: (prev, next) => setCurrentSlide(next),
     };
 
     return (
-        <div className="my-25 max-w-11/13 mx-auto">
-            <div className="flex justify-between">
+        <div className="hidden md:block my-25 max-w-11/13 mx-auto">
+            <div className="flex justify-between items-center">
                 <div>
-                    <h1 className="font-bold text-2xl text-white">Featured Destinations</h1>
-                    <p className="text-neutral-400">Handpicked travel experiences for the adventure seekers</p>
+                    <h1 className="font-bold text-3xl text-white">Featured Destinations</h1>
+                    <p className="text-neutral-400  text-[1.10rem] mt-2">Handpicked travel experiences for the adventure seekers</p>
                 </div>
                 <Link href={'/destination'}>
-                    <Button variant="outline" className={'rounded-none text-[#b38b6d] border-[#b38b6d]'}>ALL DESTINATIONS <ArrowRight></ArrowRight></Button></Link>
+                    <Button variant="outline" className={'rounded-none mt-3  text-[#b38b6d] border-[#b38b6d]'}>ALL DESTINATIONS <ArrowRight></ArrowRight></Button></Link>
             </div >
             <Slider {...settings} className="">
                 {
-                    featuredData.map(destination => <div key={destination._id} className="max-w-xl pr-4 mb-7 mt-4">
+                    featuredData.map(destination => <div key={destination._id} className=" md:max-w-xl pr-4 mb-7 mt-4">
                         <Card variant="" className={'rounded-md bg-[#272738af] border border-white/20'}>
                             <Image src={destination.imageUrl} className='w-full object-cover rounded-md h-[260px]' height={260} width={220} alt={destination.destinationName}></Image>
                             <span className='flex items-center gap-1 text-neutral-400'><span className="text-[#b38b6d]"><SlLocationPin /></span> {destination.country}</span>

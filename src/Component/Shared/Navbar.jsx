@@ -28,7 +28,7 @@ export function Nabvar() {
                 <header className="flex h-16 items-center justify-between ">
                     <div className="flex items-center gap-4">
                         <button
-                            className="md:hidden"
+                            className="lg:hidden text-white"
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             aria-label="Toggle menu"
                         >
@@ -58,7 +58,7 @@ export function Nabvar() {
                         </button>
 
                         <div>
-                            <Image src={'https://i.ibb.co.com/fVw728gG/wanderlust-b9876e-removebg-preview-Picsart-Ai-Image-Enhancer.png'} className="h-[35px] w-full" height={150} width={240} alt="logo"></Image>
+                            <Image src={'https://i.ibb.co.com/fVw728gG/wanderlust-b9876e-removebg-preview-Picsart-Ai-Image-Enhancer.png'} className="h-6 md:h-[35px] w-full" height={150} width={240} alt="logo"></Image>
                         </div>
 
                     </div>
@@ -66,7 +66,7 @@ export function Nabvar() {
 
 
 
-                    <div className="bg-[#272738af] gap-7 hidden md:flex px-17 uppercase rounded-full py-1 border border-white/30">
+                    <div className="bg-[#272738af] gap-7 hidden lg:flex px-17 uppercase rounded-full py-1 border border-white/30">
 
 
                         <div className="">
@@ -122,12 +122,13 @@ export function Nabvar() {
                     </ul>
                 </header>
                 {isMenuOpen && (
-                    <div className="border-t border-separator md:hidden">
-                        <ul className="flex flex-col gap-2 p-4">
-                            <li><Link href="/">Home</Link></li>
-                            <li><Link href="/destination">Destinations</Link></li>
-                            <li><Link href="/mybookings">My Bookings</Link></li>
-                            <li><Link className={'no-underline'} href="/add-destination">Add Destinations</Link></li>
+                    <div className="border-t border-separator  lg:hidden">
+                        <ul className="flex flex-col gap-2 p-4 text-white bg-[#272738]">
+                            <li><Link className={'text-white'} href="/">Home</Link></li>
+                            <li><Link className={'text-white'} href="/profile">Profile</Link></li>
+                            <li><Link className={'text-white'} href="/destination">Destinations</Link></li>
+                            <li><Link className={'text-white'} href="/mybooking">My Bookings</Link></li>
+                            <li><Link className={'text-white'}  href="/add-destination">Add Destinations</Link></li>
                         </ul>
                     </div>
                 )}

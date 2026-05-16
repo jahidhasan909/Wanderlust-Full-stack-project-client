@@ -10,9 +10,9 @@ const WhyChoose = () => {
         <div className='bg-linear-to-r from-[#0f1118] to-[#14182b] my-10'>
 
             <div className=' container mx-auto text-center py-28'>
-                <h1 className='text-2xl font-bold text-white'>Why Choose Wanderlust</h1>
-                <p className='text-neutral-400 mb-9 mt-2'>Your trusted partner for exceptional travel experiences</p>
-                <div className='grid grid-cols-3 gap-4 max-w-7xl mx-auto'>
+                <h1 className='text-xl md:text-3xl font-bold text-white'>Why Choose Wanderlust</h1>
+                <p className='text-neutral-400 mb-9 mt-2 text-[0.90rem] md:text-[1.10rem]'>Your trusted partner for exceptional travel experiences</p>
+                <div className='grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto'>
                     <Card className=' rounded-md bg-[#272738af] border border-white/10'>
                         <div className='p-3 '>
                             <span className='flex justify-center text-[#b9876e]'><AiOutlineSafety size={'30'} /></span>

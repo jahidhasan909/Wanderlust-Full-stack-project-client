@@ -9,8 +9,8 @@ const TravelarsSay = () => {
             <Image src={'https://images.unsplash.com/photo-1573843981267-be1999ff37cd'} width={1300} height={600} className="w-full h-[600px] relative overflow-hidden object-cover" alt=""></Image>
             <div className=' absolute  inset-0 bg-[#151f2ded]'></div>
             <div className=" absolute top-1/2 -translate-1/2 left-1/2  container">
-            <h1 className="text-center text-2xl font-bold text-white">What Travelers Say</h1>
-            <p className="text-center text-neutral-300 mb-3">Real experiences from our happy travelers</p>
+            <h1 className="text-center text-3xl font-bold text-white">What Travelers Say</h1>
+            <p className="text-center text-neutral-300 mb-6 mt-2 text-[1.10rem]">Real experiences from our happy travelers</p>
                 <Marquee speed={100} pauseOnHover={true} className="">
                     <section className="flex gap-3">
                         <Card className="flex flex-row w-[500px] h-[250px] rounded-md bg-[#272738af] border border-white/10">

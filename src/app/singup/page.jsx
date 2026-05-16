@@ -47,7 +47,7 @@ const SingupPage = () => {
     return (
         <div className="max-w-2xl mx-auto mt-35 mb-20 ">
             <h1 className="text-center text-3xl font-semibold text-white">Create Account</h1>
-            <p className="text-center text-neutral-400">Start your adventure with Wanderlust</p>
+            <p className="text-center text-neutral-400 mt-2 text-[1.10rem] mb-5">Start your adventure with Wanderlust</p>
             <Card className=" rounded-md my-3 bg-[#272738af] border border-white/20">
 
                 <Form className="max-w-2xl flex flex-col gap-4 p-2" onSubmit={onSubmit}>

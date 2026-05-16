@@ -45,7 +45,7 @@ const LogInPage = () => {
     return (
         <div className="max-w-2xl mx-auto mt-35 mb-20 ">
             <h1 className="text-center text-3xl font-bold text-white">Welcome Back</h1>
-            <p className="text-center text-neutral-400">Resume your adventure with Wanderlust</p>
+            <p className="text-center text-neutral-400 mt-2 mb-5 text-[1.10rem]">Resume your adventure with Wanderlust</p>
             <Card className=" rounded-md my-3 bg-[#272738af] border-white/20 border">
 
                 <Form className="max-w-2xl flex flex-col gap-4 p-2 " onSubmit={onSubmit}>
